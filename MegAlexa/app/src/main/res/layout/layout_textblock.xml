@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:gravity="start"
+              android:padding="16dp"
+              android:background="@color/colorSecondaryAccent" android:id="@+id/layout_textblock">
+
+    <TextView
+            android:text="@string/entertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView" android:textStyle="bold"
+            tools:text="Enter text" android:layout_gravity="center"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:autofillHints=""
+            android:labelFor="@id/editText"
+            android:id="@+id/editText" android:padding="2dp"
+            android:gravity="center"
+            tools:targetApi="o" android:layout_gravity="center"/>
+    <Button
+            android:text="@string/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/confirm_button" tools:text="Confirm"
+            android:layout_gravity="center"/>
+</LinearLayout>

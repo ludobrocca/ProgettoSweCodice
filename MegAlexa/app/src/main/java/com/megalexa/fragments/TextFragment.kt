@@ -8,6 +8,7 @@
  * History:
  * Author           || Date         || Description
  * Andrea Deidda    || 2019-02-23   || creating file and header
+ * Andrea Deidda    || 2019-02-25   || insert methods
  *
  */
 package com.megalexa.fragments

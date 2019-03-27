@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.*
 import com.megalexa.R
 import com.megalexa.adapters.view.ListArrayAdapter
+import com.megalexa.ui.fragments.PinFragment
 import com.megalexa.ui.fragments.RssFragment
 import com.megalexa.ui.fragments.TextToSpeechFragment
 import com.megalexa.util.view.FragmentClickListener
@@ -54,6 +55,12 @@ class CreateBlockActivity: AppCompatActivity(), View.OnClickListener, FragmentCl
                     transaction.replace(R.id.fragment_container, fragment).addToBackStack("").commit()
 
                 }
+                2-> {
+                    fragment = PinFragment()
+                    val transaction = supportFragmentManager.beginTransaction()
+                    transaction.replace(R.id.fragment_container, fragment).addToBackStack("").commit()
+
+                }
             }
 
         }
@@ -81,7 +88,15 @@ class CreateBlockActivity: AppCompatActivity(), View.OnClickListener, FragmentCl
             setResult(Activity.RESULT_OK,intent)
             finish()
 
+        }else if(sender is PinFragment){
+//            val pin = sender.getText()
+//            val intent = Intent(this,CreateWorkflowActivity::class.java)
+//            intent.putExtra("block_type", "Pin")
+//            intent.putExtra("text",pin)
+//            setResult(Activity.RESULT_OK,intent)
+//            finish()
         }
+
     }
 
     override fun onClick(view: View) {
@@ -102,7 +117,8 @@ class CreateBlockActivity: AppCompatActivity(), View.OnClickListener, FragmentCl
         //more pairs to be added
         return listOf(
             Pair(list[0], R.drawable.ic_feed_rss),
-            Pair(list[1], R.drawable.ic_text)
+            Pair(list[1], R.drawable.ic_text),
+            Pair(list[2], R.drawable.ic_pin)
         )
 
     }
@@ -110,7 +126,7 @@ class CreateBlockActivity: AppCompatActivity(), View.OnClickListener, FragmentCl
 
     private fun getTitlesList(): List<String> {
 
-        return listOf("Add FeedRSS","Add Text Block")
+        return listOf("Add FeedRSS","Add Text Block","Add Pin")
 
     }
 

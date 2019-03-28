@@ -31,20 +31,16 @@ class PinFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.pin_fragment_layout,container,false)
-
         val button = view.findViewById<Button>(R.id.SaveButtonPin)
         val editText = view.findViewById<EditText>(R.id.pinID)
 
         button.setOnClickListener {
             pin = editText.text.toString()
-
-
             if(pin == "") {
                 Toast.makeText(context, "error whith your pin", Toast.LENGTH_SHORT).show()
             }
             else{
                 Toast.makeText(context,pin, Toast.LENGTH_SHORT).show()
-                pin = editText.text.toString()
                 val activity= activity as CreateBlockActivity
                 activity.onFragmentClick(this)
             }

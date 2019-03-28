@@ -2,11 +2,7 @@ package com.megalexa
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
-import com.megalexa.models.blocks.BlockFeedRss
 import com.megalexa.models.blocks.BlockPin
-import com.megalexa.models.blocks.BlockTextToSpeech
-import com.megalexa.models.blocks.Filter
-import com.megalexa.models.connectors.ConnectorAmazonMusic
 
 import org.junit.Test
 import org.junit.runner.RunWith
